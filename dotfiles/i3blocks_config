@@ -1,0 +1,65 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+align=true
+markup=pango
+border_top=0
+border_bottom=1
+border_left=0
+border_right=0
+color=#eeeeee
+
+[cpu_usage]
+command=/home/viti/.config/i3blocks/cpu_usage
+interval=10
+LABEL= 
+color=#dfd932
+#border=#dfd932
+T_WARN=65
+T_CRIT=85
+#DECIMALS=2
+
+[memory]
+command=/home/viti/.config/i3blocks/memory
+label= 
+color=#52aeff
+#border=#52aeff
+interval=30
+
+[disk]
+command=/home/viti/.config/i3blocks/disk
+LABEL= 
+color=#cb56fc
+#border=#91e78b
+#DIR=$HOME
+#ALERT_LOW=10
+interval=30
+
+[wifi]
+command=/home/viti/.config/i3blocks/wifi
+label= 
+color=#62fc03
+#border=#62fc03
+INTERFACE=wlan0
+interval=60
+
+#[essid]
+#command=/home/viti/.config/i3blocks/essid
+#label= 
+#interval=60
+#color=#62fc03
+#border=#62fc03
+#INTERFACE=wlan0
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
